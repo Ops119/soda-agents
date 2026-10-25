@@ -1,0 +1,6 @@
+field,value,notes
+hardware_cost_usd,1200,What you pay for the machine
+monthly_power_usd,40,Your electricity, not the manufacturer's
+monthly_rent_usd,0,Colocation or a spare shelf at home
+monthly_rewards_usd,90,An assumption. Not a quote.
+lifetime_months,24,How long you are willing to run it

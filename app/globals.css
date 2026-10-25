@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #07110d;
+  --bg-2: #0c1b14;
+  --card: #10241b;
+  --line: #234536;
+  --foam: #f4f7f1;
+  --muted: #8eaea0;
+  --lime: #d6ff4a;
+  --lime-ink: #142006;
+  --citrus: #ff7a45;
+  --warn: #ffc14d;
+  --danger: #ff5d73;
+  --ok: #3ee0a2;
+  --background: var(--bg);
+  --foreground: var(--foam);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-foam: var(--foam);
+  --color-muted: var(--muted);
+  --color-lime: var(--lime);
+  --color-lime-ink: var(--lime-ink);
+  --color-citrus: var(--citrus);
+  --color-warn: var(--warn);
+  --color-danger: var(--danger);
+  --color-ok: var(--ok);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 420px at 90% -10%, rgb(214 255 74 / 14%), transparent 55%),
+    radial-gradient(700px 380px at -10% 20%, rgb(255 122 69 / 10%), transparent 50%),
+    var(--bg);
+  color: var(--foam);
+  font-family: var(--font-sans), "Outfit", sans-serif;
+}
+
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgb(244 247 241 / 4%) 0.6px, transparent 0.6px);
+  background-size: 18px 18px;
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display), "Bricolage Grotesque", sans-serif;
+}
+
+.tab-scroll {
+  scrollbar-width: none;
+}
+
+.tab-scroll::-webkit-scrollbar {
+  display: none;
+}
